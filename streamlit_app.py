@@ -53,7 +53,7 @@ with st.expander('Newly modified dependant features'):
 # Encoding
 le = LabelEncoder()
 with st.expander('Encoded data'):
-  X = le.fit_transform(X.island, X.sex)
+  X = le.fit_transform(X['island'], X['sex'])
   X
   
 
