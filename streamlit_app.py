@@ -50,13 +50,13 @@ with st.expander('Newly modified dependant features'):
   st.write('**X**')
   X
 
-# # Encoding
-# st.write('Encoded the features "island" & "sex" using labelencoder')
-# le = LabelEncoder()
-# with st.expander('Encoded data'):
-#   X['island'] = le.fit_transform(X['island'])
-#   X['sex'] = le.fit_transform(X['sex'])
-#   X
+# Encoding
+st.write('Encoded the features "island" & "sex" using labelencoder')
+le = LabelEncoder()
+with st.expander('Encoded data'):
+  X['island'] = le.fit_transform(X['island'])
+  X['sex'] = le.fit_transform(X['sex'])
+  X
   
 
 
