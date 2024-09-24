@@ -23,9 +23,13 @@ with st.expander('Target and predictors'):
 # Data Prep
 with st.sidebar:
   st.header('Input Features')
-  # "species","island","bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g","sex"
-  st.radio("Select the Island:",
+  island = st.radio("Select the Island:",
            ["Torgersen","Dream","Biscoe"], index=None)
-  st.radio("Select the Gender:",
+  gender = st.radio("Select the Gender:",
            ["Male", "Female"], index=None)
+  bill_length_mm = st.slider('Bill length (mm)', 32.10, 59.60, 42.51)
+  bill_depth_mm = st.slider('Bill Depth (mm)', 13.10, 21.50, 17.20)
+  flipper_length_mm = st.slider('Flipper length (mm)', 172.00, 231.00, 201.00)
+  body_mass_g = st.slider('Body mass (g)', 2700.00, 6300.00, 4207.00)
+  
 
