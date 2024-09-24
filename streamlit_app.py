@@ -81,6 +81,11 @@ with st.expander('Model Training'):
   pred_prob_df=pd.DataFrame(pred_prob)
   pred_prob_df.columns = ['Adelie', 'Gentoo', 'Chinstrap']
   pred_prob_df
+  # Predicted value
+  st.info('The predicted penguin for the input feature is')
+  penguin_species = np.array(['Adelie', 'Gentoo', 'Chinstrap'])
+  st.success(str(penguin_species[prediction][0]))
+  
   
 
 
