@@ -30,7 +30,7 @@ with st.sidebar:
   bill_depth_mm = st.slider('Bill Depth (mm)', 13.10, 21.50, 17.20)
   flipper_length_mm = st.slider('Flipper length (mm)', 172.00, 231.00, 201.00)
   body_mass_g = st.slider('Body mass (g)', 2700.00, 6300.00, 4207.00)
-  gender = st.radio("Select the Gender:",
+  sex = st.radio("Select the sex:",
            ["Male", "Female"], index=None)
 
   # Inputting a new row in the dataset
@@ -40,7 +40,7 @@ with st.sidebar:
             'bill_depth_mm': bill_depth_mm,
             'flipper_length_mm': flipper_length_mm,
             'body_mass_g': body_mass_g,
-            'gender': gender}
+            'sex': sex}
     input_df = pd.DataFrame(new_data, index=[0])
     st.write(input_df, '*A new row of data has been created*')
     input_penguins = pd.concat([input_df, X], axis=0)
@@ -53,7 +53,7 @@ with st.expander('Newly modified dependant features'):
 # Encoding
 le = LabelEncoder()
 with st.expander('Encoded data'):
-  X = le.fit_transform(X.island, X.gender)
+  X = le.fit_transform(X.island, X.sex)
   X
   
 
