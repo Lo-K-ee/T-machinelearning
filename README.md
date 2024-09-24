@@ -10,9 +10,9 @@ This machine learning app predicts a penguin species type based on the input fro
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/Lo-K-ee/T-machinelearning/blob/master/streamlit_app.py)
 
-## Data Used
+## Dataset Used
 
-You can check out the data that has been used for this here (https://github.com/Lo-K-ee/datasets/blob/main/penguins_cleaned.csv)
+[![View Dataset](https://img.shields.io/badge/View-Dataset-blue)](https://github.com/Lo-K-ee/datasets/blob/main/penguins_cleaned.csv)
 
 ## Model Used
 
