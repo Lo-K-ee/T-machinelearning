@@ -77,9 +77,10 @@ with st.expander('Model Training'):
   # Making predictions using the trained model
   pred = rfc.predict(X_new[:1])
   pred_prob = rfc.predict_proba(X_new[:1])
-
-  pred_prob.columns = ['Adelie', 'Gentoo', 'Chinstrap']
-  pred_prob
+  # Converting the Numpy array into a df to give appropriate column names
+  pred_prob_df=pd.DataFrame(pred_prob)
+  pred_prob_df.columns = ['Adelie', 'Gentoo', 'Chinstrap']
+  pred_prob_df
   
 
 
