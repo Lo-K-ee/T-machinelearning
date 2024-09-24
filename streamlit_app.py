@@ -16,6 +16,7 @@ st.write('*Here, we have displayed both the dependant variable and the independa
 with st.expander('Target and predictors'):
   st.write('**X**')
   X = df.drop('species', axis=1)
+  X_new = df.drop('species', axis=1)
   X
   st.write('**y**')
   y = df.species
@@ -76,6 +77,8 @@ with st.expander('Model Training'):
   # Making predictions using the trained model
   pred = clf.predict(X_new[:1])
   pred_prob = clf.predict_proba(X_new[:1])
+
+  pred_prob
   
 
 
