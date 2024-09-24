@@ -11,5 +11,4 @@ with st.expander('Raw Cleaned Data'):
 
 st.write('Here, we have displayed both the dependant variable and the independant variables seperately')
 
-with st.expander('Target and predictors'):
 
