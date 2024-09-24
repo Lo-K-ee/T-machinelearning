@@ -40,7 +40,13 @@ with st.sidebar:
             'body_mass_g': body_mass_g,
             'gender': gender}
     input_df = pd.DataFrame(new_data, index=[0])
-    st.write(input_df, 'has been created')
+    st.write(input_df, 'a new row of data has been created')
+    input_penguins = pd.concat([input_df, X], axis=0)
+
+with st.expander('Newly modified dependant features'):
+  st.write('**X**')
+  input_penguins
+
     
     
     
