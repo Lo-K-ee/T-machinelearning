@@ -8,7 +8,7 @@ This machine learning app predicts a penguin species type based on the input fro
 
 ## GitHub Codespaces
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)]([https://codespaces.new/streamlit/app-starter-kit?quickstart=1](https://github.com/Lo-K-ee/T-machinelearning/blob/master/streamlit_app.py))
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/Lo-K-ee/T-machinelearning/blob/master/streamlit_app.py)
 
 ## Data Used
 
