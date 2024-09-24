@@ -48,7 +48,7 @@ with st.sidebar:
 st.write('*An input feature based on the selection has been added to the original dataframe*')
 with st.expander('Newly modified dependant features'):
   st.write('**X**')
-  X = copy(X_old)
+  X = X_old.copy(deep=True)
 
 # Encoding
 st.write('Encoded the features "island" & "sex" using labelencoder')
