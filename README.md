@@ -18,4 +18,4 @@ This machine learning app predicts a penguin species type based on the input fro
 
 We have used the Random Forest Classifier model to predict the different types of penguin species we had in our dataset: "Adelie, Gentoo, Chinstrap"
 
-Feel free to play with the app and let me know how it is!
+Feel free to play with the app and let me know what you think!
