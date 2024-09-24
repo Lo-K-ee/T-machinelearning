@@ -78,6 +78,7 @@ with st.expander('Model Training'):
   pred = rfc.predict(X_new[:1])
   pred_prob = rfc.predict_proba(X_new[:1])
 
+  pred_prob.columns = ['Adelie', 'Gentoo', 'Chinstrap']
   pred_prob
   
 
