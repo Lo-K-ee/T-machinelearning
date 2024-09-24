@@ -13,8 +13,8 @@ with st.expander('Raw Cleaned Data'):
 st.write('*Here, we have displayed both the dependant variable and the independant variables seperately*')
 with st.expander('Target and predictors'):
   st.write('**X**')
-  X = df.drop('species', axis=1)
-  X
+  X_old = df.drop('species', axis=1)
+  X_old
   st.write('**y**')
   y = df.species
   y
@@ -43,12 +43,12 @@ with st.sidebar:
             'sex': sex}
     input_df = pd.DataFrame(new_data, index=[0])
     st.write(input_df, '*A new row of data has been created*')
-    input_penguins = pd.concat([input_df, X], axis=0)
+    input_penguins = pd.concat([input_df, X_old], axis=0)
 
 st.write('*An input feature based on the selection has been added to the original dataframe*')
 with st.expander('Newly modified dependant features'):
   st.write('**X**')
-  X
+  X = copy(X_old)
 
 # Encoding
 st.write('Encoded the features "island" & "sex" using labelencoder')
