@@ -25,7 +25,7 @@ with st.sidebar:
   st.header('Input Features')
   # "species","island","bill_length_mm","bill_depth_mm","flipper_length_mm","body_mass_g","sex"
   st.radio("Select the Island:",
-           ["Torgersen","Dream","Biscoe"])
+           ["Torgersen","Dream","Biscoe"], index=None)
   st.radio("Select the Gender:",
-           ["Male", "Female"])
+           ["Male", "Female"], index=None)
 
