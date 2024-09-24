@@ -49,6 +49,7 @@ st.write('*An input feature based on the selection has been added to the origina
 with st.expander('Newly modified dependant features'):
   st.write('**X**')
   X = X_old.copy(deep=True)
+  X
 
 # Encoding
 st.write('Encoded the features "island" & "sex" using labelencoder')
