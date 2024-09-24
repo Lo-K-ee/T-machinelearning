@@ -84,7 +84,8 @@ with st.expander('Model Training'):
   pred_prob_df
   # Predicted value
   penguin_species = np.array(['Adelie', 'Gentoo', 'Chinstrap'])
-  st.success('The predicted penguin for the input feature is', str(penguin_species[pred][0]))
+  st.write('The predicted penguin for the input feature is')
+  st.success(str(penguin_species[pred][0]))
   
   
 
