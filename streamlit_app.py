@@ -5,6 +5,11 @@ st.title('🤖Machine learning app')
 
 st.info('This app deploys a linear regression model for a simple cleaned dataset')
 
-with st.expander('data'):
-  df = pd.read_csv('https://raw.githubusercontent.com/ybifoundation/Dataset/main/Salary%20Data.csv')
+with st.expander('Raw Cleaned Data'):
+  df = pd.read_csv('https://raw.githubusercontent.com/Lo-K-ee/datasets/refs/heads/main/penguins_cleaned.csv')
   df
+
+st.write('Here, we have displayed both the dependant variable and the independant variables seperately')
+
+with st.expander('Target and predictors'):
+  # X = drop(df. 
