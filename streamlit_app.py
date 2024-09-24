@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
+
 
 st.title('🤖Machine learning app')
 
@@ -43,23 +45,37 @@ with st.sidebar:
             'sex': sex}
     input_df = pd.DataFrame(new_data, index=[0])
     st.write(input_df, '*A new row of data has been created*')
-    X = pd.concat([input_df, X], axis=0)
+    X_new = pd.concat([input_df, X], axis=0)
 
 st.write('*An input feature based on the selection has been added to the original dataframe*')
 with st.expander('Newly modified dependant features'):
-  st.write('**X**')
-  X
+  st.write('**X_new**')
+  X_new
 
 # Encoding
 st.write('Encoded the features "island" & "sex" using labelencoder')
 le = LabelEncoder()
 with st.expander('Encoded data'):
+  st.write('**X**')
   X['island'] = le.fit_transform(X['island'])
   X['sex'] = le.fit_transform(X['sex'])
   X
+  st.write('**X_new**')
+  X_new['island'] = le.fit_transform(X_new['island'])
+  X_new['sex'] = le.fit_transform(X_new['sex'])
+  X_new
+  st.write('**y**')
   y = le.fit_transform(y)
   y
-  
+
+# Model Training 
+st.write("Now we're gonna train Random forest classifier for this problem")
+with st.expander('Model Training'):
+  rfc = RandomForestClassifier()
+  rfc.fit(X, y)
+  # Making predictions using the trained model
+  pred = clf.predict(X_new[:1])
+  pred_prob = clf.predict_proba(X_new[:1])
   
 
 
