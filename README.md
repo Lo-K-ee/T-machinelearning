@@ -1,6 +1,6 @@
 # 📦 Machine Learning Automation app
 
-This is a machine learning app that deploys machine learning models based on the inputs from the user.
+This machine learning app predicts a penguin species type based on the input from the user.
 
 ## Demo App
 
@@ -10,13 +10,12 @@ This is a machine learning app that deploys machine learning models based on the
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/app-starter-kit?quickstart=1)
 
-## Section Heading
+## Data Used
 
-This is filler text, please replace this with text for this section.
+You can check out the data that has been used for this here (https://github.com/Lo-K-ee/datasets/blob/main/penguins_cleaned.csv)
 
-## Further Reading
+## Model Used
 
-This is filler text, please replace this with a explanatory text about further relevant resources for this repo
-- Resource 1
-- Resource 2
-- Resource 3
+We have used the Random Forest Classifier model to predict the different types of penguin species we had in our dataset: "Adelie, Gentoo, Chinstrap"
+
+Feel free to play with the app and let me know how it is!
