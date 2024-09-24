@@ -17,8 +17,6 @@ with st.expander('Target and predictors'):
   st.write('**y**')
   y = df.species
   y
-
-  # species	island	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g	sex
-  
-  st.scatter_chart(df, bill_length_mm, body_mass_g)
+  st.write('Data Visualization')
+  st.scatter_chart(df, x='bill_length_mm', y='body_mass_g', color='species')
 
