@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
 
 st.title('🤖Machine learning app')
 
@@ -42,6 +43,7 @@ with st.sidebar:
             'body_mass_g': body_mass_g,
             'sex': sex}
     input_df = pd.DataFrame(new_data, index=[0])
+    input_df = le.fit_transform(input_df)
     st.write(input_df, '*A new row of data has been created*')
     input_penguins = pd.concat([input_df, X], axis=0)
 
@@ -52,7 +54,6 @@ with st.expander('Newly modified dependant features'):
 
 # Encoding
 st.write('Encoded the features "island" & "sex" using labelencoder')
-le = LabelEncoder()
 with st.expander('Encoded data'):
   X['island'] = le.fit_transform(X['island'])
   X['sex'] = le.fit_transform(X['sex'])
