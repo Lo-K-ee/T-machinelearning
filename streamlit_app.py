@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
 st.title('🤖Machine learning app')
 
@@ -49,7 +50,14 @@ with st.expander('Newly modified dependant features'):
   st.write('**X**')
   X
 
-    
+# Encoding
+le = LabelEncoder()
+with st.expander('Encoded data'):
+  X = le.fit_transform(X.island, X.gender)
+  X
+  
+
+
     
     
   
