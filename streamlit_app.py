@@ -33,13 +33,15 @@ with st.sidebar:
            ["Male", "Female"], index=None)
 
   if st.button('Add a new row'):
-    new_feature = {'island': island,
+    new_data = {'island': island,
             'bill_length_mm': bill_length_mm,
             'bill_depth_mm': bill_depth_mm,
             'flipper_length_mm': flipper_length_mm,
             'body_mass_g': body_mass_g,
             'gender': gender}
-    st.write(new_feature, 'has been added')
+    input_df = pd.DataFrame(new_data, index=[0])
+    st.write(input_df, 'has been created')
+    
     
     
   
