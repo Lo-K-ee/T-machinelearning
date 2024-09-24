@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.title('🤖Machine learning app')
 
-st.info('This app builds a machine learning model for a simple cleaned dataset')
+st.info('This app builds a ML model and predicts the output for an input feature from the user')
 
 with st.expander('Raw Cleaned Data'):
   df = pd.read_csv('https://raw.githubusercontent.com/Lo-K-ee/datasets/refs/heads/main/penguins_cleaned.csv')
