@@ -12,7 +12,7 @@ with st.expander('Raw Cleaned Data'):
 st.write('*Here, we have displayed both the dependant variable and the independant variables seperately*')
 with st.expander('Target and predictors'):
   st.write('**X**')
-  X = df.drop('species')
+  X = df.drop('species', axis=1)
   X
   st.write('**y**')
   y = df.species
