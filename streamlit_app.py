@@ -75,8 +75,8 @@ with st.expander('Model Training'):
   rfc = RandomForestClassifier()
   rfc.fit(X, y)
   # Making predictions using the trained model
-  pred = clf.predict(X_new[:1])
-  pred_prob = clf.predict_proba(X_new[:1])
+  pred = rfc.predict(X_new[:1])
+  pred_prob = rfc.predict_proba(X_new[:1])
 
   pred_prob
   
