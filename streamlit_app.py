@@ -13,8 +13,8 @@ with st.expander('Raw Cleaned Data'):
 st.write('*Here, we have displayed both the dependant variable and the independant variables seperately*')
 with st.expander('Target and predictors'):
   st.write('**X**')
-  X_old = df.drop('species', axis=1)
-  X_old
+  X = df.drop('species', axis=1)
+  X
   st.write('**y**')
   y = df.species
   y
@@ -41,14 +41,13 @@ with st.sidebar:
             'flipper_length_mm': flipper_length_mm,
             'body_mass_g': body_mass_g,
             'sex': sex}
-    input_df = pd.DataFrame(new_data, index=[0])
+    input_df = pd.DataFrame(new_data, index=[-1])
     st.write(input_df, '*A new row of data has been created*')
-    input_penguins = pd.concat([input_df, X_old], axis=0)
+    input_penguins = pd.concat([input_df, X], axis=0)
 
 st.write('*An input feature based on the selection has been added to the original dataframe*')
 with st.expander('Newly modified dependant features'):
   st.write('**X**')
-  X = X_old.copy(deep=True)
   X
 
 # Encoding
