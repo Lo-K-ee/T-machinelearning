@@ -57,6 +57,9 @@ with st.expander('Encoded data'):
   X['island'] = le.fit_transform(X['island'])
   X['sex'] = le.fit_transform(X['sex'])
   X
+  Y = le.fit_transform(Y)
+  Y
+  
   
 
 
