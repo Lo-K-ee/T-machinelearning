@@ -20,3 +20,7 @@ with st.expander('Target and predictors'):
   st.write('Data Visualization')
   st.scatter_chart(df, x='bill_length_mm', y='body_mass_g', color='species')
 
+# Data Prep
+with st.sidebar:
+  st.header('Input Features')
+
